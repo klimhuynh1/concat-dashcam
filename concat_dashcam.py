@@ -13,7 +13,6 @@ def get_file_names(dir_path):
             filenames.append(file_path)
     return filenames
     
-
 def separate_filenames(filenames):
     # Separate filenames into F and R
     front_files = [name for name in filenames if re.search(r'F\.MP4', name)]
@@ -32,7 +31,6 @@ def create_input_text_file(front_files, rear_files):
         for filename in rear_files:
             file.write("file concat/" + filename + "\n")
         file.close()
-
 
 def concatenate_front_videos():
     # Build the ffmpeg command
@@ -68,10 +66,12 @@ def concatenate_rear_videos():
     except subprocess.CalledProcessError as e:
         print(f"Error during concatenation: {e}")
 
-
 def main():
     current_dir_path = os.getcwd()
     dir_path =  os.path.join(current_dir_path,"concat")
+    filesnames = get_file_names(dir_path)
+    front_files, rear_files = separate_filenames(filesnames)
+    create_input_text_file(front_files, rear_files)
     concatenate_front_videos()
     concatenate_rear_videos()
 
