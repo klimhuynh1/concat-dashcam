@@ -22,8 +22,11 @@ def separate_filenames(filenames):
     front_files = [name for name in filenames if re.search(r"F\.MP4", name)]
     rear_files = [name for name in filenames if re.search(r"R\.MP4", name)]
 
-    return front_files, rear_files
+    # sort the list in ascending order
+    front_files.sort()
+    rear_files.sort()
 
+    return front_files, rear_files
 
 def create_input_text_file(front_files, rear_files):
     # Create a text file containing relative path of all front view dashcam footage
