@@ -1,7 +1,7 @@
 
 # concat-dashcam
 
-This Python script is designed specifically for concatenating front and rear dashcam videos into two separate files using FFmpeg. It creates two text files, `front_input.txt` and `rear_input`, which are then used as input to the FFmpeg command.
+This Python script is designed specifically for concatenating front and rear dashcam videos into two separate files using FFmpeg. It creates two text files, `front_input.txt` and `rear_input.txt`, which are then used as input to the FFmpeg command.
 
   
 
