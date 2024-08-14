@@ -1,15 +1,12 @@
-
 # concat-dashcam
 
-This Python script is designed specifically for concatenating front and rear dashcam videos into two separate files using FFmpeg. It creates two text files, `front_input.txt` and `rear_input.txt`, which are then used as input to the FFmpeg command.
+Dashcams often split recordings into several short video files. This script merges the front and rear dashcam videos into two single files.
 
-  
+The Python script uses FFmpeg to combine front and rear dashcam videos. It creates two text files, front_input.txt and rear_input.txt, which FFmpeg uses to generate the final videos.
 
 ## Requirements
 
 concat-dashcam requires [Python 3+](https://www.python.org/downloads/) and [FFmpeg](https://ffmpeg.org/download.html) installed.
-
-  
 
 ## Usage
 
@@ -21,10 +18,7 @@ concat-dashcam requires [Python 3+](https://www.python.org/downloads/) and [FFmp
 	python concat_dashcam.py
 	```
 
-3. The script will create two output files, concat_front.mp4 and concat_rear.mp4, containg concatenated front and rear dashcam videos, respectively.
-
-  
-
+3. The script will create two output files, concat_front.mp4 and concat_rear.mp4, containing concatenated front and rear dashcam videos, respectively.
 ## Notes
 
-- This script has only been tested on dashcam videos taken on the VIOFO A129 Plus.
+- This script was built for and tested on dashcam videos taken with the VIOFO A129 Plus.
